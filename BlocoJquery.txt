@@ -1,0 +1,17 @@
+.val recebe valores de elementos como input, select textarea,
+se for chamado em uma coleção vazia = undefined
+
+Já a FUNÇÂO .text() pega o conteúdo de texto de tags HTML que tem texto dentro, como as <h1>, <span> e <p>
+
+$(".corpo-noticia").on("input", attCaracteres); -> A FUNÇÂO .on() recebe dois parâmetros, o nome do evento a escutar e uma FUNÇÂO com a ação que deve executar!
+
+
+
+campo.on("focus", function() --> on focus quando uma tag como input, select ou um link href é utilizada dispara uma ação, ah ação(evento) é escutado o tempo todo
+
+campo.one --> função executada apenas uma vez 
+
+
+funcoes de tempo do JavaScript: setInterval e clearInterval
+
+Manipulação com attr() Jquery
