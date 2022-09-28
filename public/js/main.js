@@ -52,3 +52,20 @@ function reiniciaJogo(){
     $("#tempo-digitacao").text(tempoInicial);
     inicializaCronometro();
 }
+
+
+///comparando frase digitada
+var frase = $(".frase").text();
+campo.on("input",function(){
+    var digitado = campo.val();
+    console.log(frase);
+    console.log(digitado);
+});
+
+var comparavel = frase.substr(0, digitado.length)
+
+if (comparavel == digitado) {
+    campo.addClass("borda-verde");
+}else{
+    campo.addClass("borda-vermelha");
+}
