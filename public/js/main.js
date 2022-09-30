@@ -39,6 +39,7 @@ function inicializaCronometro() {
             if (tempoRestante < 1) {
                 campo.attr("disabled", true);
                 clearInterval(cronometroID);
+                campo.addClass("campo-desativado");
             }
         }, 1000);
     });
@@ -79,3 +80,25 @@ campo.toggleClass("borda-vermelha", !ehCorreto);
 })};
 
 
+function inserePlacar(){
+    var corpoTabela = $(".placar").find("tbody");
+    var usuario = "Seu-nome";
+    var numPalavras = $("#contador-palavras").text();
+    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>" ;
+
+    var linha = "<tr>"+
+                    "<td>"+ usuario + "</td>"+
+                    "<td>"+ numPalavras + "</td>"+
+                    "<td>"+ botaoRemover + "</td>"+
+                "</tr>";
+
+                corpoTabela.append(linha);
+
+}
+
+//essa funcao vai remover a funcionalidade padrão da tag com a classa chamada
+
+$(".botao-remover").click(function(event){
+    event.preventDefault();
+    $(this).parent().parent().remove();
+});
