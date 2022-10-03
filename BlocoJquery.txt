@@ -15,3 +15,14 @@ campo.one --> função executada apenas uma vez
 funcoes de tempo do JavaScript: setInterval e clearInterval
 
 Manipulação com attr() Jquery
+
+$("#gastos").append(linha); --> A função que adiciona um novo elemento como último filho é a append. Ela recebe um elemento HTML ou uma string e adiciona-o como um filho, depois dos filhos que ele já possuía.
+
+
+$(".lista-compras").prepend("<li>Celular</li>"); -->
+
+O comando que adiciona um novo elemento como primeiro filho é o prepend(). Ele recebe um elemento HTML ou uma string e adiciona-o como um filho, antes dos filhos que ele já possuía.
+
+A função .parent() tem como objetivo navegar pela árvore de elementos do HTML. Ela por padrão retorna o pai do elemento em que foi chamada --> O código $("h1").parent(".segunda"); seleciona todos os h1s da página, e busca em cada um deles por um pai com a classe segunda. Neste caso, retornando apenas a div inferior.
+
+A função .remove() , serve pare remover um elemento do HTML, como o próprio nome indica. Tome cuidado ao usá-la , pois o elemento é realmente removido e não apenas escondido, que é o caso quando usamos a função .hide().

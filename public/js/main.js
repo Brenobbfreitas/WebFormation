@@ -85,6 +85,7 @@ function inserePlacar(){
     var usuario = "Seu-nome";
     var numPalavras = $("#contador-palavras").text();
     var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>" ;
+    var novaLinha = novaLinha();
 
     var linha = "<tr>"+
                     "<td>"+ usuario + "</td>"+
@@ -96,9 +97,35 @@ function inserePlacar(){
 
 }
 
+
+
+function novaLinha(){
+    var linha = $("<tr>"); //insere uma nola linha tr
+    var colunaUsuario = $("<td>").text(usuario);
+    var colunaPalavras = $("<td>").text(palavras);
+    var colunaRemover = $("<td>");
+
+
+    var link = $("<a>").attr("href","#").addClass("botao-remover");
+    var icone = $("<i>").addClass("small").addClass("material-icons").text("delete");
+
+        // Os dois <td> dentro do <tr>
+        linha.append(colunaUsuario);
+        linha.append(colunaPalavras);
+    
+        return linha;
+}
+
 //essa funcao vai remover a funcionalidade padrão da tag com a classa chamada
 
 $(".botao-remover").click(function(event){
     event.preventDefault();
     $(this).parent().parent().remove();
 });
+
+
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
+}
